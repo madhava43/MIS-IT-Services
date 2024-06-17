@@ -1,86 +1,73 @@
-body {
-    font-family: Arial, sans-serif;
+/* Resetting default margin and padding */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styling */
 nav {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
-    background-color: white;
-    padding: 0 20px;
-    border-bottom: 1px solid #ccc;
-}
-
-.nav-left {
-    display: flex;
     align-items: center;
 }
 
-.nav-right {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+nav ul li {
+    margin: 0;
+    padding: 0 10px;
 }
 
-nav a {
-    color: black;
-    padding: 14px 20px;
+nav ul li a {
     text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s;
 }
 
-nav a.logo {
-    font-weight: bold;
-    font-size: 18px;
+nav ul li a:hover {
+    color: #007bff;
 }
 
-nav a:hover, .dropdown:hover .dropbtn {
+.logo {
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.get-in-touch {
     background-color: #007bff;
     color: white;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
     text-decoration: none;
-    display: block;
-    text-align: left;
-    transition: background-color 0.3s;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+.get-in-touch:hover {
+    background-color: #0056b3;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.video-container {
+/* Video background section styling */
+.video-background {
     position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
 
-.background-video {
+.video-background video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -88,230 +75,267 @@ nav a:hover, .dropdown:hover .dropbtn {
     height: 100%;
     object-fit: cover;
     transform: translate(-50%, -50%);
-    z-index: -1;
 }
 
-.overlay {
+.video-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     color: white;
+}
+
+.video-overlay h1 {
+    font-size: 3em;
     text-align: center;
 }
 
-footer {
-    background-color: #f8f8f8;
-    padding: 1px;
-    text-align: center;
-    border-top: 1px solid #ccc;
+/* Services, Portfolio, and Technologies sections styling */
+.services-section, .portfolio-section, .technologies-section {
+    padding: 50px 0;
+    background-color: #f9f9f9; /* Example background color */
 }
 
-.services-container {
+.services-section h2, .portfolio-section h2, .technologies-section h2 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+.services-container, .portfolio-container, .technologies-container {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.service-item {
-    flex: 0 0 auto;
-    width: 250px;
-    margin: 20px;
+.service, .portfolio-item, .technology {
+    flex: 1 1 250px; /* Adjust as necessary */
+    max-width: 250px;
+    margin: 10px;
     text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.service-item:hover {
-    transform: scale(1.05);
-    background-color: #007bff;
-    color: white;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-.service-item img {
+.service img, .portfolio-item img, .technology img {
     width: 100%;
-    height: 200px;
+    height: 150px; /* Fixed height for uniformity */
     object-fit: cover;
-    border-radius: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     transition: transform 0.3s;
 }
 
-.service-item img:hover {
-    transform: scale(1.1);
+.service:hover img, .portfolio-item:hover img, .technology:hover img {
+    transform: scale(1.05);
 }
 
-.service-item h3 {
-    margin: 10px 0;
+.service-info, .portfolio-info, .technology-info {
+    padding: 15px;
 }
 
-.service-item a {
-    text-decoration: none;
-    color: inherit;
+.service-info h3, .portfolio-info h3, .technology-info h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
 }
 
-section {
-    padding: 20px;
+.service-info p, .portfolio-info p, .technology-info p {
+    margin-top: 0;
+    font-size: 0.9em;
 }
 
-.center-underline {
-    display: block;
-    position: relative;
-    text-align: center;
-    margin: 0 auto 20px auto;
-    width: max-content;
+/* Careers section styling */
+.careers-section {
+    padding: 50px 0;
 }
 
-.center-underline::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    bottom: -5px;
-    left: 0;
-}
-
-.about-careers-container {
+.careers-container {
     display: flex;
-    justify-content: space-around;
-    padding: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
-.about-careers-item {
-    flex: 1 1 45%;
-    text-align: center;
-    margin: 10px;
-    background-color: white;
+.open-positions {
+    flex: 1;
+    max-width: 300px;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.about-careers-item:hover {
-    transform: scale(1.05);
+.open-positions h2 {
+    margin-top: 0;
+}
+
+.open-positions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.open-positions li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.open-positions li:last-child {
+    border-bottom: none;
+}
+
+.open-positions li:hover {
+    background-color: #f0f0f0;
+}
+
+.position-details {
+    flex: 1;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.position-details h2 {
+    margin-top: 0;
+}
+
+.position-details p {
+    margin-bottom: 20px;
+}
+
+.position-details button {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
     background-color: #007bff;
     color: white;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.about-careers-item a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
+.position-details button:hover {
+    background-color: #0056b3;
 }
 
-.about-careers-item h2 {
-    margin: 10px 0;
+/* Contact section styling */
+.contact-section {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-map {
+    flex: 1;
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
 }
 
 .contact-details {
-    max-width: 600px;
-    margin: 0 auto;
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h2 {
+    margin-top: 0;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-#map iframe {
-    width: 100%;
-    border: none;
+.footer-section {
+    padding: 20px;
+    text-align: left;
+    flex: 1 1 250px; /* Adjust as necessary */
 }
 
-/* Responsive Design */
+.footer-section h3 {
+    margin-top: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #007bff;
+}
+
+footer p {
+    margin-top: 20px;
+}
+
 @media (max-width: 768px) {
-    .nav-right {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .dropdown-content {
-        position: static;
-    }
-    
-    .dropdown-content a {
-        width: 100%;
-    }
-
-    .services-container {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .service-item {
-        flex: 1 1 100%;
-        margin: 10px 0;
-    }
-
-    .about-careers-container {
+    .services-container, .portfolio-container, .technologies-container {
         flex-direction: column;
         align-items: center;
     }
 
-    .about-careers-item {
-        flex: 1 1 100%;
-        margin: 10px 0;
+    .services-container .service, .portfolio-container .portfolio-item, .technologies-container .technology {
+        max-width: 100%;
     }
-}
 
-@media (max-width: 480px) {
-    nav {
+    .careers-container {
         flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    nav a {
-        padding: 10px;
     }
 
-    .nav-left, .nav-right {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+    .open-positions, .position-details, .contact-map, .contact-details {
+        max-width: 100%;
+        margin: 0 0 20px;
     }
 
-    .nav-right {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .dropdown-content {
-        position: static;
-    }
-    
-    .dropdown-content a {
-        width: 100%;
-    }
-    
-    .services-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-item {
-        width: 90%;
-        margin: 10px 0;
-    }
-
-    .about-careers-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .about-careers-item {
-        width: 90%;
-        margin: 10px 0;
+    .footer-section {
+        text-align: center;
     }
 }

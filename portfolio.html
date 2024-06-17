@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers - Mahira IT Services</title>
+    <title>Portfolio - Mahira IT Services</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
 </head>
 <body>
     <!-- Navigation bar -->
@@ -21,32 +20,36 @@
         </ul>
     </nav>
 
-    <!-- Careers section -->
-    <section class="careers-section">
-        <div class="careers-container">
-            <div class="open-positions">
-                <h2>Open Positions</h2>
-                <ul>
-                    <li onclick="showPositionDetails('position1')">Software Developer</li>
-                    <li onclick="showPositionDetails('position2')">Project Manager</li>
-                    <li onclick="showPositionDetails('position3')">Business Analyst</li>
-                </ul>
+    <!-- Portfolio section -->
+    <section class="portfolio-section">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-item">
+                <img src="images/staffing.jpg" alt="Staffing">
+                <div class="portfolio-info">
+                    <h3>Staffing</h3>
+                    <p>Description of staffing services...</p>
+                </div>
             </div>
-            <div class="position-details">
-                <div id="position1" class="position-info">
-                    <h2>Software Developer</h2>
-                    <p>Details about Software Developer position...</p>
-                    <button onclick="applyForPosition('Software Developer')">Apply Now</button>
+            <div class="portfolio-item">
+                <img src="images/solution_delivery.jpeg" alt="Solution Delivery">
+                <div class="portfolio-info">
+                    <h3>Solution Delivery</h3>
+                    <p>Description of solution delivery services...</p>
                 </div>
-                <div id="position2" class="position-info">
-                    <h2>Project Manager</h2>
-                    <p>Details about Project Manager position...</p>
-                    <button onclick="applyForPosition('Project Manager')">Apply Now</button>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/product_development.jpg" alt="Product Development">
+                <div class="portfolio-info">
+                    <h3>Product Development</h3>
+                    <p>Description of product development services...</p>
                 </div>
-                <div id="position3" class="position-info">
-                    <h2>Business Analyst</h2>
-                    <p>Details about Business Analyst position...</p>
-                    <button onclick="applyForPosition('Business Analyst')">Apply Now</button>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/trainings.jpeg" alt="Trainings">
+                <div class="portfolio-info">
+                    <h3>Trainings</h3>
+                    <p>Description of training services...</p>
                 </div>
             </div>
         </div>

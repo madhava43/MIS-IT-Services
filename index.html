@@ -3,92 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIS IT Services</title>
+    <title>Mahira IT Services</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation bar -->
     <nav>
-        <div class="nav-left">
-            <a href="index.html" class="logo">MIS IT Services</a>
-        </div>
-        <div class="nav-right">
-            <a href="index.html#home">Home</a>
-            <div class="dropdown">
-                <a href="services.html" class="dropbtn">Services &#9662;</a>
-                <div class="dropdown-content">
-                    <a href="cloud-services.html">Cloud Services</a>
-                    <a href="application-services.html">Application Services</a>
-                    <a href="mobile-applications.html">Mobile Applications</a>
-                    <a href="aws-consulting.html">AWS Consulting</a>
-                </div>
-            </div>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="careers.html">Careers</a>
-            <a href="get-in-touch.html">Get in Touch &#9742;</a>
-        </div>
+        <ul>
+            <li><a href="index.html"><img src="images/logo.png" alt="Logo" class="logo"> Mahira IT Services</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="technologies.html">Technologies</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="mailto:contact@mahiraitservices.com" class="get-in-touch">Get in Touch</a></li>
+        </ul>
     </nav>
-    <div class="video-container">
-        <video class="background-video" autoplay muted loop>
-            <source src="HighTech.mp4" type="video/mp4">
+
+    <!-- Video background section -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="video/HighTech.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div class="overlay">
-            <h1>MIS IT Services</h1>
-            <p>Providing innovative solutions for your business needs.</p>
+        <div class="video-overlay">
+            <h1>Welcome to Mahira IT Services</h1>
         </div>
     </div>
-    <section id="services">
-        <h2 class="center-underline">Our Services</h2>
+
+    <!-- Services section -->
+    <section class="services-section">
+        <h2>Our Services</h2>
         <div class="services-container">
-            <div class="service-item">
-                <a href="cloud-services.html">
-                    <img src="Cloud Services.jpg" alt="Cloud Services">
+            <div class="service">
+                <img src="images/Cloud Services.jpg" alt="Cloud Services">
+                <div class="service-info">
                     <h3>Cloud Services</h3>
-                    <p>Transform your business with our cloud solutions.</p>
-                </a>
+                    <p>Reliable and scalable cloud services.</p>
+                </div>
             </div>
-            <div class="service-item">
-                <a href="application-services.html">
-                    <img src="Application Services.jpg" alt="Application Services">
+            <div class="service">
+                <img src="images/Application Services.jpg" alt="Application Services">
+                <div class="service-info">
                     <h3>Application Services</h3>
-                    <p>Custom application development for your business needs.</p>
-                </a>
+                    <p>Innovative application solutions.</p>
+                </div>
             </div>
-            <div class="service-item">
-                <a href="mobile-applications.html">
-                    <img src="Mobile Applications.jpg" alt="Mobile Applications">
+            <div class="service">
+                <img src="images/Mobile Applications.jpg" alt="Mobile Applications">
+                <div class="service-info">
                     <h3>Mobile Applications</h3>
-                    <p>Seamless performance across all mobile devices.</p>
-                </a>
+                    <p>Cutting-edge mobile applications.</p>
+                </div>
             </div>
-            <div class="service-item">
-                <a href="aws-consulting.html">
-                    <img src="AWS Consulting.jpg" alt="AWS Consulting">
+            <div class="service">
+                <img src="images/AWS Consulting.jpg" alt="AWS Consulting">
+                <div class="service-info">
                     <h3>AWS Consulting</h3>
-                    <p>Optimize and scale your cloud infrastructure.</p>
-                </a>
+                    <p>Expert AWS consulting services.</p>
+                </div>
             </div>
         </div>
     </section>
-    <section id="about-careers">
-        <div class="about-careers-container">
-            <div class="about-careers-item">
-                <a href="about.html">
-                    <h2 class="center-underline">About Us</h2>
-                    <p>Learn more about our company and our mission.</p>
-                </a>
+
+    <!-- Portfolio section -->
+    <section class="portfolio-section">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-item">
+                <img src="images/staffing.jpg" alt="Staffing">
+                <div class="portfolio-info">
+                    <h3>Staffing</h3>
+                    <p>Description of staffing services...</p>
+                </div>
             </div>
-            <div class="about-careers-item">
-                <a href="careers.html">
-                    <h2 class="center-underline">Careers</h2>
-                    <p>Join our team and help us build amazing solutions.</p>
-                </a>
+            <div class="portfolio-item">
+                <img src="images/solution_delivery.jpeg" alt="Solution Delivery">
+                <div class="portfolio-info">
+                    <h3>Solution Delivery</h3>
+                    <p>Description of solution delivery services...</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/product_development.jpg" alt="Product Development">
+                <div class="portfolio-info">
+                    <h3>Product Development</h3>
+                    <p>Description of product development services...</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/trainings.jpeg" alt="Trainings">
+                <div class="portfolio-info">
+                    <h3>Trainings</h3>
+                    <p>Description of training services...</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Footer section -->
     <footer>
-        <p>&copy; 2024 MIS IT Services. All rights reserved.</p>
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Information about the company...</p>
+        </div>
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="technologies.html">Technologies</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="careers.html">Careers</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="https://www.facebook.com">Facebook</a></li>
+                <li><a href="https://www.twitter.com">Twitter</a></li>
+                <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Case Studies</a></li>
+                <li><a href="#">White Papers</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Mahira IT Services. All rights reserved.</p>
     </footer>
 </body>
 </html>
