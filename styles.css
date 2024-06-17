@@ -7,13 +7,28 @@
 
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Navigation bar styling */
 nav {
-    background-color: white;
-    border-bottom: 1px solid #ddd;
+    background-color: #343a40;
     padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -32,8 +47,7 @@ nav ul li {
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #333;
+    color: #fff;
     font-size: 16px;
     transition: color 0.3s;
 }
@@ -49,10 +63,13 @@ nav ul li a:hover {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
 }
 
 .dropdown-content a {
-    color: black;
+    color: #333;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -60,11 +77,14 @@ nav ul li a:hover {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: #007bff;
+    color: #fff;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .arrow {
@@ -84,6 +104,7 @@ nav ul li a:hover {
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
+    transition: background-color 0.3s;
 }
 
 .get-in-touch:hover {
@@ -106,6 +127,7 @@ nav ul li a:hover {
     height: 100%;
     object-fit: cover;
     transform: translate(-50%, -50%);
+    filter: brightness(0.7);
 }
 
 .video-overlay {
@@ -124,16 +146,22 @@ nav ul li a:hover {
 .video-overlay h1 {
     font-size: 3em;
     text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 /* Services, Portfolio, and Technologies sections styling */
 .services-section, .portfolio-section, .technologies-section {
     padding: 50px 0;
-    background-color: #f9f9f9; /* Example background color */
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
 .services-section h2, .portfolio-section h2, .technologies-section h2 {
-    text-align: center;
     text-decoration: underline;
     margin-bottom: 30px;
 }
@@ -147,7 +175,7 @@ nav ul li a:hover {
 }
 
 .service, .portfolio-item, .technology {
-    flex: 1 1 250px; /* Adjust as necessary */
+    flex: 1 1 250px;
     max-width: 250px;
     margin: 10px;
     text-align: center;
@@ -156,19 +184,21 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .service img, .portfolio-item img, .technology img {
     width: 100%;
-    height: 150px; /* Fixed height for uniformity */
+    height: 150px;
     object-fit: cover;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     transition: transform 0.3s;
 }
 
-.service:hover img, .portfolio-item:hover img, .technology:hover img {
-    transform: scale(1.05);
+.service:hover, .portfolio-item:hover, .technology:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .service-info, .portfolio-info, .technology-info {
@@ -188,6 +218,7 @@ nav ul li a:hover {
 /* Careers section styling */
 .careers-section {
     padding: 50px 0;
+    background-color: #e9ecef;
 }
 
 .careers-container {
@@ -195,6 +226,8 @@ nav ul li a:hover {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .open-positions {
@@ -204,10 +237,12 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
 .open-positions h2 {
     margin-top: 0;
+    font-size: 1.5em;
 }
 
 .open-positions ul {
@@ -219,6 +254,7 @@ nav ul li a:hover {
     cursor: pointer;
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
 }
 
 .open-positions li:last-child {
@@ -236,11 +272,13 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: none; /* Initially hidden */
+    background-color: #fff;
+    display: none;
 }
 
 .position-details h2 {
     margin-top: 0;
+    font-size: 1.5em;
 }
 
 .position-details p {
@@ -256,6 +294,7 @@ nav ul li a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .position-details button:hover {
@@ -265,6 +304,7 @@ nav ul li a:hover {
 /* Contact section styling */
 .contact-section {
     padding: 50px 0;
+    background-color: #f9f9f9;
 }
 
 .contact-container {
@@ -286,10 +326,12 @@ nav ul li a:hover {
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
 .contact-details h2 {
     margin-top: 0;
+    font-size: 1.5em;
 }
 
 .contact-map iframe {
@@ -300,7 +342,7 @@ nav ul li a:hover {
 
 /* Footer styling */
 footer {
-    background-color: #333;
+    background-color: #343a40;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -312,11 +354,12 @@ footer {
 .footer-section {
     padding: 20px;
     text-align: left;
-    flex: 1 1 250px; /* Adjust as necessary */
+    flex: 1 1 250px;
 }
 
 .footer-section h3 {
     margin-top: 0;
+    color: #007bff;
 }
 
 .footer-section ul {
@@ -340,6 +383,7 @@ footer {
 
 footer p {
     margin-top: 20px;
+    font-size: 0.9em;
 }
 
 @media (max-width: 768px) {
@@ -348,7 +392,7 @@ footer p {
         align-items: flex-start;
     }
 
-    .services-container, .portfolio-container, .technologies-container {
+    .services-container, .portfolio-container, .technologies-container, .contact-container {
         flex-direction: column;
         align-items: center;
     }
