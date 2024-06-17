@@ -12,9 +12,33 @@
     <nav>
         <ul>
             <li><a href="index.html"><img src="logo.png" alt="Logo" class="logo"> Mahira IT Services</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="technologies.html">Technologies</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+            <li class="dropdown">
+                <a href="services.html">Services <span class="arrow">&#9660;</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Cloud Services</a>
+                    <a href="#">Application Services</a>
+                    <a href="#">Mobile Applications</a>
+                    <a href="#">AWS Consulting</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="technologies.html">Technologies <span class="arrow">&#9660;</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Technology 1</a>
+                    <a href="#">Technology 2</a>
+                    <a href="#">Technology 3</a>
+                    <a href="#">Technology 4</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="portfolio.html">Portfolio <span class="arrow">&#9660;</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Staffing</a>
+                    <a href="#">Solution Delivery</a>
+                    <a href="#">Product Development</a>
+                    <a href="#">Trainings</a>
+                </div>
+            </li>
             <li><a href="contact.html">Contact Us</a></li>
             <li><a href="careers.html">Careers</a></li>
             <li><a href="mailto:contact@mahiraitservices.com" class="get-in-touch">Get in Touch</a></li>
@@ -27,12 +51,12 @@
             <div class="open-positions">
                 <h2>Open Positions</h2>
                 <ul>
-                    <li onclick="showPositionDetails('position1')">Software Developer</li>
-                    <li onclick="showPositionDetails('position2')">Project Manager</li>
-                    <li onclick="showPositionDetails('position3')">Business Analyst</li>
+                    <li data-position="position1">Software Developer</li>
+                    <li data-position="position2">Project Manager</li>
+                    <li data-position="position3">Business Analyst</li>
                 </ul>
             </div>
-            <div class="position-details">
+            <div class="position-details" style="display: none;">
                 <div id="position1" class="position-info">
                     <h2>Software Developer</h2>
                     <p>Details about Software Developer position...</p>
