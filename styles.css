@@ -234,9 +234,6 @@ nav ul li a:hover {
     flex: 1;
     max-width: 300px;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
 }
 
@@ -269,9 +266,6 @@ nav ul li a:hover {
     flex: 1;
     max-width: 600px;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     display: none;
 }
@@ -323,10 +317,6 @@ nav ul li a:hover {
 
 .contact-details {
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
 }
 
 .contact-details h2 {
